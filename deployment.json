@@ -1,0 +1,12 @@
+{
+  "account": "SAMiiNW",
+  "network": "StudioNet",
+  "contractAddress": "0xDAD80c75C0A7e3F5BF1339C739e6cE36967Fe3e2",
+  "deploymentTransaction": "0x705530a564d4a05cb7bf3a588e2687467a9b189419b0432bb965df93b8d9f45c",
+  "deploymentConsensus": "MAJORITY_AGREE",
+  "deploymentExecution": "SUCCESS",
+  "sourceSha256": "2b53708340b04b69d820795be6302d93ee34a32115e37306190dd409bec280c4",
+  "sourceCommit": "4fcf4de4889ca0b75effca4c310c3e5e21803903",
+  "repository": "https://github.com/SAMiiNW/trace-sieve",
+  "publicSite": "https://trace-sieve.pages.dev/"
+}
