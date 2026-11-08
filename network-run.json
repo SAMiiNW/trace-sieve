@@ -1,0 +1,105 @@
+{
+  "recordType": "operator-controlled exception rehearsal",
+  "recordId": "SIEVE-1794172855",
+  "contractAddress": "0x253Cd89F18a229469dB8453E24526Bb5F375201F",
+  "wallets": {
+    "operator": "0xCAFA30BF94D4fb01146588a1b7901BD85E7DbD0f",
+    "reviewer": "0x013A0745a3b2DbF87f4AB377266fCcb7e6eEC88A"
+  },
+  "transactions": {
+    "open_batch_0": "0xed9dca98fedbf901b3830603d86004f60c79564635897493932b66b6473f59e5",
+    "add_trace_1": "0x89aaa9b2967711f8595a55786730d163158d97fa13fdbbee924a70d5edad9944",
+    "add_trace_2": "0x6cb169ffee7e50b7ad89e05cd086d746d3d616beba754cb9ae12e65d17ae3dbb",
+    "add_trace_3": "0x9e1a2dd654d73f9033cbe4eab6d75e1c79e6dbf3ba6f8a86bde0383a49052cdd",
+    "freeze_batch_4": "0xd78588585561925744de46da7fd2c39a17f037a1fc1c142a791ba6e0e1c8f9ed",
+    "sieve_5": "0x59dddd542146fb6086db6de335e0c7df35516d1a810cabf3d130d60b203b3968",
+    "accept_patch_6": "0x66a9396f02a4d46061961b8a5a95281d9c779366c3a93d9d3bc03bdd03dd1b2a"
+  },
+  "readback": {
+    "common_triggers": [
+      "TIMEOUT"
+    ],
+    "deadline": 1794176610,
+    "digests": [
+      "31cd12157da6ab68df2c5d1b1376aa7382dc029bada6cfea55268794a727843e",
+      "24b34f96063ef8a893c7217389ff9407584fb9016afc38825396316b37403b28",
+      "3e87fd5b3db81e1f3610903250efc428f4b7047f8b63ddf90e3aa1f2fc4f0f76",
+      "be81d49342e54bfbbc9f0f9124759eb50696a97473669afbc2d4420807b5c81d"
+    ],
+    "effect_codes": [
+      "DELAY",
+      "DENY",
+      "DROP",
+      "RETRY"
+    ],
+    "id": "SIEVE-1794172855",
+    "minimum_support": 2,
+    "normalized": [
+      {
+        "effect_codes": [
+          "RETRY"
+        ],
+        "trace_index": 0,
+        "trigger_codes": [
+          "TIMEOUT"
+        ]
+      },
+      {
+        "effect_codes": [
+          "DELAY",
+          "RETRY"
+        ],
+        "trace_index": 1,
+        "trigger_codes": [
+          "QUEUE_SATURATED",
+          "TIMEOUT"
+        ]
+      },
+      {
+        "effect_codes": [
+          "DENY"
+        ],
+        "trace_index": 2,
+        "trigger_codes": [
+          "AUTH_EXPIRED"
+        ]
+      }
+    ],
+    "operator": "0xCAFA30BF94D4fb01146588a1b7901BD85E7DbD0f",
+    "outlier_indexes": [
+      2
+    ],
+    "patch_mode": "SPLIT",
+    "review_seconds": 3600,
+    "reviewer": "0x013A0745a3b2DbF87f4AB377266fCcb7e6eEC88A",
+    "rulebook_url": "https://raw.githubusercontent.com/SAMiiNW/trace-sieve/dcf51cf0bb05d10686ce8d96ea4f53852ee3551f/evidence/rulebook.md",
+    "state": "ACCEPTED",
+    "title": "API exception trigger batch",
+    "traces": [
+      {
+        "id": "ALPHA",
+        "label": "Timeout retry trace",
+        "origin": "cdn.jsdelivr.net",
+        "url": "https://cdn.jsdelivr.net/gh/SAMiiNW/trace-sieve@dcf51cf0bb05d10686ce8d96ea4f53852ee3551f/evidence/trace-alpha.md"
+      },
+      {
+        "id": "BETA",
+        "label": "Queue timeout trace",
+        "origin": "raw.githack.com",
+        "url": "https://raw.githack.com/SAMiiNW/trace-sieve/dcf51cf0bb05d10686ce8d96ea4f53852ee3551f/evidence/trace-beta.md"
+      },
+      {
+        "id": "GAMMA",
+        "label": "Expired credential trace",
+        "origin": "cdn.statically.io",
+        "url": "https://cdn.statically.io/gh/SAMiiNW/trace-sieve/dcf51cf0bb05d10686ce8d96ea4f53852ee3551f/evidence/trace-gamma.md"
+      }
+    ],
+    "trigger_codes": [
+      "AUTH_EXPIRED",
+      "QUEUE_SATURATED",
+      "SCHEMA_DRIFT",
+      "TIMEOUT"
+    ]
+  }
+}
